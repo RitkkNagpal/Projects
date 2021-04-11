@@ -34,14 +34,7 @@ let numFollowings;
     numFollowers=await tab.evaluate(function(elem){ return elem.textContent; },profileInfo[1]);
     numFollowings=await tab.evaluate(function(elem){ return elem.textContent; },profileInfo[2]);
 
-    //for getting names of all the followers
-    // profileInfo[2].click();
-    // let allFollowingNamesContainer= await tab.waitForSelector('.isgrP');
 
-    // await scrollDown(allFollowingNamesContainer,tab);
-    // await tab.waitForTimeout(10000);
-    // await tab.waitForSelector("li.wo9IH .FPmhX");
-    // let allFollowingNames=await tab.$$("li.wo9IH .FPmhX");
     let allFollowingNamesArray=await getNamesArray(profileInfo[2],tab,".FPmhX",numFollowings);
     let closeButton=await tab.$('svg[aria-label="Close"]');
     closeButton.click();
