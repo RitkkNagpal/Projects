@@ -1,6 +1,5 @@
 const puppeteer=require("puppeteer");
-const id="robbyabagnale__";
-const pwd="CatchMeIfYouCan";
+
 
 const fs=require("fs");
 let numFollowers;
